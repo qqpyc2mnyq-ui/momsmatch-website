@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>momsmatch – bald da</title>
+<meta name="description" content="Hier entsteht momsmatch – die App, die Mütter in deiner Nähe verbindet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --top: #7A2049;
+    --mid: #B23A5B;
+    --bottom: #E17A57;
+    --white: #FFFFFF;
+    --pale: rgba(255,255,255,0.62);
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6vh 1.75rem;
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--white);
+    background: linear-gradient(160deg, var(--top) 0%, var(--mid) 42%, var(--bottom) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* soft glow, echoing the app's splash screen */
+  body::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    right: -15%;
+    width: 60vw;
+    height: 60vw;
+    max-width: 480px;
+    max-height: 480px;
+    background: radial-gradient(circle, rgba(255,255,255,0.16) 0%, rgba(255,255,255,0) 70%);
+    pointer-events: none;
+  }
+
+  .brand {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.15em;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: clamp(2.1rem, 9vw, 3.1rem);
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+
+  .brand .m2,
+  .brand .match { color: var(--pale); }
+  .brand .m1 { color: var(--white); }
+
+  .pin {
+    display: inline-flex;
+    width: 0.62em;
+    height: 0.62em;
+    margin: 0 0.02em;
+    vertical-align: -0.03em;
+  }
+  .pin svg { width: 100%; height: 100%; }
+
+  .tagline {
+    position: relative;
+    z-index: 1;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: clamp(1rem, 3.6vw, 1.3rem);
+    color: var(--pale);
+    margin: 0.9rem 0 3.5rem;
+  }
+
+  .status {
+    position: relative;
+    z-index: 1;
+    max-width: 30ch;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.88);
+  }
+
+  .status strong {
+    display: block;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 600;
+    font-size: 0.78rem;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 0.6rem;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 3.5vh;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.55);
+  }
+</style>
+</head>
+<body>
+
+  <div class="brand">
+    <span class="m1">m</span><span class="pin" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s7-6.2 7-12.4A7 7 0 0 0 5 9.6C5 15.8 12 22 12 22Z" fill="#FFFFFF"/><circle cx="12" cy="9.4" r="2.6" fill="var(--mid)"/></svg>
+    </span><span class="m2">ms</span>&nbsp;<span class="match">match</span>
+  </div>
+
+  <div class="tagline">Find dein Dorf nebenan.</div>
+
+  <p class="status">
+    <strong>Bald ist es da</strong>
+    Hier entsteht gerade die Website zu momsmatch – der App, die Mütter in deiner Nähe verbindet.
+  </p>
+
+  <footer>&copy; 2026 momsmatch</footer>
+</body>
+</html>
